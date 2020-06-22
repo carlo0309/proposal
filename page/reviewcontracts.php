@@ -34,6 +34,25 @@
     </div>
     </nav>
 
+<div class="container-fluid">
+                   <div class="card-header">
+                       <h5 class="pt-1">Review Contract</h5>
+                       <button style="float:right" type="button" class="btn btn-sm btn-primary ml-1">Download</button>
+                       <button style="float:right" type="button" class="btn btn-sm btn-primary ml-1">Compare Contracts</button>
+                   </div>
+                  
+                   <div class="card shadow rounded mt-3">
+                   <div class="card-header">
+                     Contract Summary
+                  </div>
+                      <div class="container">
+                        <div class="row">
+                        Contract title : &nbsp; <b>SOW for Account 1</b>
+                        Created By : &nbsp; <b>Employee 2
+                        </div>
+                      </div>
+                  </div>
+</div> 
 
 </body>
 </html>

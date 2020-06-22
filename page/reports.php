@@ -18,7 +18,7 @@
         <a class="nav-link" style="color:#ffff ; Font-family: Calibri; " href="index.php">Dashboard</a>
    
         <a class="nav-link" style="color:#ffff ; Font-family: Calibri; " href="create_contract.php">Create Contract</a>
-   
+        <a class="nav-link-" style="color:#ffff ; Font-family: Calibri; " href="reviewcontracts.php">Review Contract</a>
      
         <a class="nav-link" style="color:#ffff ; Font-family: Calibri;" href="repository.php">Repository</a>
     

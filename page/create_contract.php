@@ -19,7 +19,8 @@
         <a class="nav-link" style="color:#ffff ; Font-family: Calibri; " href="index.php">Dashboard</a>
    
         <a class="active" style="color:#ffff ; Font-family: Calibri; " href="create_contract.php">Create Contract</a>
-   
+
+        <a class="nav-link-" style="color:#ffff ; Font-family: Calibri; " href="reviewcontracts.php">Review Contract</a>
      
         <a class="nav-link" style="color:#ffff ; Font-family: Calibri;" href="repository.php">Repository</a>
     
@@ -34,8 +35,7 @@
     </nav>
 
 <div class="container-fluid">
-     <div class="container-fluid">
-     <div class="container-fluid">
+
     <div class="row justify-content-center">
         <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
             <div class="card px-0 pt-4 pb-0 mt-3 mb-3">

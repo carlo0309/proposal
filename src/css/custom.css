@@ -1,0 +1,399 @@
+
+body {font-family: Calibri;}
+
+.active {
+  border-bottom: 2px solid white;
+}
+.content {
+width:100%;
+height: 100%; 
+margin-top:100px;
+}
+
+.floater {
+    position: absolute;
+    top: 88px;
+    right: 10px;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 2;
+    padding: 10px;
+    color: #780096;
+    text-align: center;
+    font-size: 15px;
+  }
+
+.floater:hover{
+  color: #00AF9B;
+ }
+
+
+
+/*form styles*/
+#msform {
+	width:auto;
+	margin: 20px auto;
+	position: relative;
+}
+
+#msform .pagecard {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	box-sizing: border-box;
+	width:100%;
+	margin: 0px 10px auto;
+	padding: 30px 30px 15px 30px;
+	
+	
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform .pagecard:not(:first-of-type) {
+	display: none;
+}
+
+/*buttons*/
+#msform .action-button {
+	background: #00AF9B;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px;
+	float: right;
+	font-size:10px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-top:5px;
+	}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 15x;
+	color: #666;
+	margin-bottom: 30px;
+}
+
+/*progbar*/
+#progbar {
+	margin-bottom: 30px;
+	width: 100%;
+	overflow: hidden;
+	
+}
+#progbar li {
+	list-style-type: none;
+	color: #666666;
+	text-transform: uppercase;
+	font-size: 13px;
+	float: left;
+	position: relative;
+	text-align: center;
+	cursor: default;
+	line-height: 38px;
+	margin: 0 3px;
+	padding: 10px 0px 10px 10px;
+	width: 200px;
+	float: left;
+	height: 60px;
+	position: relative;
+	left:-25px;
+	background-color: #fae6ff;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+   transition: background-color 0.2s ease;
+}
+
+#progbar li:after,
+#progbar li:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: -17px;
+	width: 0;
+	height: 0;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-left: 17px solid #fae6ff;	
+
+	z-index: 1;
+    transition: border-color 0.2s ease;
+}
+
+#progbar li:before {
+	right: auto;
+	left: 0;
+	border-left: 17px solid #fff;	
+	z-index: 0;
+}
+
+
+#progbar li:first-child:before {
+	border: none;
+}
+
+#progbar li:first-child {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+} 
+
+
+
+#progbar li span {
+	position: relative;
+}
+
+#progbar li span.before {
+	opacity: 0;
+	content: "✔";
+	position: absolute;
+	top: -2px;
+	left: -20px;
+	color: white;
+	font-weight: bold;
+}
+
+#progbar li span:before{
+	opacity: 1;
+	-webkit-transition: opacity 0.3s ease 0.5s;
+	-moz-transition: opacity 0.3s ease 0.5s;
+	-ms-transition: opacity 0.3s ease 0.5s;
+	transition: opacity 0.3s ease 0.5s;
+}
+
+
+#progbar li.current  {
+	color: #f2f2f2;
+	font-weight: bold;
+	background-color: #780096;
+}
+
+#progbar li.current:after  {
+	border-left: 17px solid #780096;	
+	
+}
+
+/* clause bar*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 4.5%;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-radius: 5px;
+}
+
+#stickheader {
+	position: fixed;
+	top:5%;
+	overflow: hidden;
+	background-color: #e9ecef;
+	padding: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #00AF9B;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  float:right;
+}
+
+.openbtn:hover {
+  background-color: #00AF9B;
+}
+
+#main {
+  transition: margin-left .5s;
+  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Contract Type Content */
+.cal {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+  border-radius:50px;
+}
+
+/* Clear floats after the columns */
+.rw:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid #666666;
+  height: 300px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .cal {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 768px) {
+#progbar {
+	max-width:20px;
+}
+	}
+
+
+
+.main {
+  margin-left: 195px; /* Same as the width of the sidenav */
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+.toolbar{
+    display:inline;
+	justify-content:center;
+    background-color: #780096;
+    color: white;
+    grid-gap: 10px;
+    align-items:left;
+    margin: 2rem;
+}
+
+.tool-items{
+  
+    cursor: pointer;
+    color: white;
+	border-radius:8px;
+	outline:none;
+	border:none;
+	background-color:transparent;
+	padding-left: 10px;
+
+}
+
+.tool-items:hover{
+    box-shadow: none;
+    background-color: #780096;
+	color:white;
+}
+
+
+
+.center{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+
+
+.editor {
+    width:100%; 
+    height: 150px auto;
+    margin: 10px;
+    padding: 40px 20px 40px 20px;
+    font-size: 13px;
+    box-shadow: 0 .1rem .4rem black;
+    border: 1px solid rgb(124, 124, 124);
+	  background-color: white;
+}
+
+.getcontent{
+    white-space: pre;
+    width: 80vw;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    padding: 1rem;
+    display: none;
+    margin-top: 1rem;
+    box-shadow: .1rem .1rem .5rem rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
